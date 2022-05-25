@@ -1,0 +1,133 @@
+
+.control-pane{
+    background: rgb(34,47,195);
+    background: linear-gradient(0deg, rgba(34,47,195,1) 0%, rgba(45,145,253,0.9962359943977591) 100%);
+    color: #fff;
+}
+.title-app{
+    margin: 10px 0 35px;
+    color: #fff;
+}
+
+/*SingleDayForecast component*/
+.weather-data .today-forecast__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 25px;
+}
+.weather-data .today-forecast__body h4{
+    text-transform: capitalize;
+    margin-top: -35px;
+    margin-bottom: 60px;
+}
+/*End SingleDayForecast component*/
+
+/*Card component*/
+.weather-data .daily-forecast{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-auto-columns: 50px;
+    grid-gap: 5px;
+    place-content: center;
+    margin-bottom: 2rem;
+}
+.weather-data .card{
+    background-color: rgba(51, 135, 185, 0.5);
+    border-radius: 8px;
+}
+/*End Card component*/
+
+/*LoadingCard component*/
+.loading-card {
+    width: 150px;
+    border-radius: 8px;
+}
+.loading-card .date, 
+.loading-card .icon, 
+.loading-card .temperature, 
+.loading-card .description, 
+.loading-card .day{
+    width: 150px;
+    background: linear-gradient(90deg, #3295cf 0px, #2f89bd 40px, #3295cf 80px);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+.loading-card .icon{
+   height: 100px;
+}
+
+.loading-card .date,.loading-card .day{
+   height: 21px;
+   margin: 8px 0;
+}
+.loading-card .temperature{
+   height: 32px;
+}
+.loading-card .description{
+   height: 17px;
+}
+/*End LoadingCard component*/
+
+/*LoadingDayForecast component*/
+.loading-today-forecast__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.loading-today-forecas strong, 
+.loading-today-forecast__temperature, 
+.loading-today-forecast__humidity-wind p, 
+.loading-today-forecast__description,
+.loading-today-forecast__icon,
+.loading-today-forecast__general-data p{
+	 background: linear-gradient(90deg, #3295cf 0px, #2f89bd 40px, #3295cf 80px);
+      border-radius: 8px;
+	 background-size: 200% 100%;
+	 animation: 1.5s shine linear infinite;
+}
+
+.loading-today-forecast__general-data p{
+    height: 3px;
+    width: 45px;
+    margin: 2px;
+}
+.loading-today-forecast__temperature{
+    height: 6px;
+    width: 65px;
+}
+.loading-today-forecast__humidity-wind{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-today-forecast__humidity-wind p{
+    height: 3px;
+    margin: 2px;
+    width: 85px;
+}
+.loading-today-forecast__icon-description{
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+.loading-today-forecast__icon{
+    height: 100px;
+    width: 100px;
+    margin: 2rem;
+}
+.loading-today-forecast__description{
+    height: 3px;
+    width: 210px;
+}
+/*End LoadingDayForecast component*/
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+   }
+}
